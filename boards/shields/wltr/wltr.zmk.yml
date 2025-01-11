@@ -1,0 +1,11 @@
+file_format: "1"
+id: wltr
+name: WLTR
+type: shield
+url: https://github.com/wltr/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - wltr_left
+  - wltr_right
