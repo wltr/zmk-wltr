@@ -1,15 +1,22 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "wltr-layouts.dtsi"
+#include <layouts/common/ortho_4x10/all1u.dtsi>
+
+&layout_ortho_4x10_all1u {
+    transform = <&default_transform>;
+};
 
 / {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &layout_ortho_4x10_all1u;
+    };
+
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
     };
-};
 
-/ {
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <10>;
@@ -20,16 +27,5 @@
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)   RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
                                     RC(3,3) RC(3,4)   RC(3,5) RC(3,6)
         >;
-    };
-};
-
-&physical_layout0 {
-    kscan = <&kscan0>;
-    transform = <&keymap_transform0>;
-};
-
-/ {
-    chosen {
-        zmk,physical-layout = &physical_layout0;
     };
 };
