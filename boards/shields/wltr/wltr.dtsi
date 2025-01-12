@@ -1,14 +1,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/common/ortho_4x10/all1u.dtsi>
+#include "wltr-layouts.dtsi"
 
-&layout_ortho_4x10_all1u {
+&physical_layout0 {
     transform = <&default_transform>;
 };
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &layout_ortho_4x10_all1u;
+        zmk,physical-layout = &physical_layout0;
     };
 
     kscan0: kscan0 {
