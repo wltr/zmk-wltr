@@ -88,14 +88,14 @@ bindings = <
     lower_layer {
 // -------------------------------------------------------------------
 // |BRIUP|     |  UP |     | HOME|     | PGUP|  7  |  8  |  9  |VOLUP|
-// |     | LFT | DWN | RGT | END |     | PGDN|  4  |  5  |  6  |     |
-// |BRIDN|     |     |     |     |     |  0  |  1  |  2  |  3  |VOLDN|
+// |BRIDN| LFT | DWN | RGT | END |     | PGDN|  4  |  5  |  6  |VOLDN|
+// |     |     |     |     |     |     |  0  |  1  |  2  |  3  |     |
 // |                 | ESC |     |     |     | DEL |                 |
 // -------------------------------------------------------------------
 bindings = <
   &kp C_BRI_UP &trans &kp UP &trans &kp HOME &kp PG_UP &kp N7 &kp N8 &kp N9 &kp C_VOL_UP
-  &trans &kp LEFT &kp DOWN &kp RIGHT &kp END &kp PG_DN &kp N4 &kp N5 &kp N6 &trans
-  &kp C_BRI_DN &trans &trans &trans &trans &kp N0 &kp N1 &kp N2 &kp N3 &kp C_VOL_DN
+  &kp C_BRI_DN &kp LEFT &kp DOWN &kp RIGHT &kp END &kp PG_DN &kp N4 &kp N5 &kp N6 &kp C_VOL_DN
+  &trans &trans &trans &trans &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans
   &mt LSHFT ESC &trans &trans &mt RSHFT DEL
 >;
     };
