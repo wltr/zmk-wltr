@@ -78,6 +78,13 @@
       key-positions = <31 32>;
       bindings = <&tog 3>;
     };
+    combo_bt_clr {
+      timeout-ms = <50>;
+      require-prior-idle-ms = <100>;
+      key-positions = <12 13>;
+      bindings = <&bt BT_CLR>;
+      layers = <2>;
+    };
   };
 };
 
@@ -95,7 +102,7 @@ bindings = <
   &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
   &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI
   &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH
-  &mt LSHFT TAB &lt 1 RET &lt 2 SPACE &mt RSHFT BSPC
+  &kp TAB &lt 1 RET &lt 2 SPACE &mt RSHFT BSPC
 >;
     };
     lower_layer {
@@ -109,21 +116,21 @@ bindings = <
   &kp C_BRI_UP &trans &kp UP &trans &kp HOME &kp PG_UP &kp N7 &kp N8 &kp N9 &kp C_VOL_UP
   &kp C_BRI_DN &kp LEFT &kp DOWN &kp RIGHT &kp END &kp PG_DN &kp N4 &kp N5 &kp N6 &kp C_VOL_DN
   &trans &trans &trans &trans &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans
-  &mt LSHFT ESC &trans &trans &mt RSHFT DEL
+  &kp ESC &trans &trans &mt RSHFT DEL
 >;
     };
     raise_layer {
 // -------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// |  `  |  ~  |  '  |  "  | BCLR|     |  -  |  =  |  [  |  ]  |  \  |
+// |  `  |  ~  |  '  |  "  |     |     |  -  |  =  |  [  |  ]  |  \  |
 // | BT0 | BT1 | BT2 | BT3 | BT4 |     |  _  |  +  |  {  |  }  | "|" |
 // |                 | ESC |     |     |     | DEL |                 |
 // -------------------------------------------------------------------
 bindings = <
   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
-  &kp GRAVE &kp TILDE &kp SQT &kp DQT &bt BT_CLR &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
+  &kp GRAVE &kp TILDE &kp SQT &kp DQT &trans &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp PIPE
-  &mt LSHFT ESC &trans &trans &mt RSHFT DEL
+  &kp ESC &trans &trans &mt RSHFT DEL
 >;
     };
     mouse_layer {
